@@ -1,10 +1,56 @@
 @import "tailwindcss";
-
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
+/* src/fonts.css */
+@font-face {
+  font-family: 'Product Sans';
+  font-style: normal;
+  font-weight: 100;
+  src: url('/fonts/ProductSans-Thin.woff') format('woff');
+  font-display: swap;
+}
 
+@font-face {
+  font-family: 'Product Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/ProductSans-Regular.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Product Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: url('/fonts/ProductSans-Italic.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Product Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/ProductSans-Medium.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Product Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/ProductSans-Bold.woff') format('woff');
+  font-display: swap;
+}
+
+html {
+  font-family: 'Product Sans', system-ui, sans-serif;
+}
+
+* {
+  font-family: inherit;
+}
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);

@@ -29,7 +29,7 @@ export default function secondSection() {
   return (
     <div>
           {/* Upcoming Events Section */}
-          <section id="events" className="relative z-10 py-20">
+          <section id="events" className="relative z-10 py-20 bg-gray-800">
                 <div className="max-w-7xl mx-auto px-8">
                     <div className="text-center mb-12">
                         <h2 className="text-white text-4xl md:text-5xl font-light mb-4">
