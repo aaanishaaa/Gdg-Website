@@ -8,7 +8,7 @@ const GDGNoidaWebsite: React.FC = () => {
         <div>
             <div className="min-h-screen p-2 md:p-4">
                 {/* Main Container with Rounded Corners */}
-                <div className="relative min-h-[calc(100vh-32px)] bg-gray-900 rounded-2xl overflow-hidden">
+                <div className="relative min-h-[calc(100vh-16px)] md:min-h-[calc(100vh-32px)] bg-gray-900 rounded-2xl overflow-hidden">
                     {/* Background Image */}
                     <div className="absolute inset-0 z-0">
                         <div
