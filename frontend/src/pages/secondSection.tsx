@@ -156,23 +156,6 @@ export default function secondSection() {
                     </div>
                 </div>
             </section>
-
-                {/* Footer */}
-                <footer className="relative z-10 py-12 border-t border-gray-200">
-                    <div className="max-w-7xl mx-auto px-8">
-                        <div className="flex flex-col md:flex-row items-center justify-between">
-                            <div className="flex items-center space-x-3 mb-4 md:mb-0">
-                                <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center">
-                                    <span className="text-white font-bold">G</span>
-                                </div>
-                                <span className="text-gray-700 font-medium">GDG Noida</span>
-                            </div>
-                            <div className="text-gray-500 text-sm">
-                                © 2025 GDG Noida. Part of Google Developer Groups.
-                            </div>
-                        </div>
-                    </div>
-                </footer>
     </div>
   );
 }
