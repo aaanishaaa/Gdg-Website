@@ -6,7 +6,7 @@ import Navigation from '@/components/layout/navigation';
 const GDGNoidaWebsite: React.FC = () => {
     return (
         <div>
-            <div className="min-h-screen bg-white p-2 md:p-4">
+            <div className="min-h-screen p-2 md:p-4">
                 {/* Main Container with Rounded Corners */}
                 <div className="relative min-h-[calc(100vh-32px)] bg-gray-900 rounded-2xl overflow-hidden">
                     {/* Background Image */}
@@ -89,12 +89,12 @@ const GDGNoidaWebsite: React.FC = () => {
 
                         {/* Hero Text Bottom-Left */}
                         <div className="flex flex-col justify-center md:justify-start md:items-start items-center flex-1">
-                            <h1 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light mb-2 text-center md:text-left">
+                            <h1 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold mb-2 text-center md:text-left">
                                 GDG
-                                <span className="block md:inline md:pl-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl mt-1 md:mt-2 font-light opacity-90">Noida</span>
+                                <span className="block md:inline md:pl-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl mt-1 md:mt-2 font-normal opacity-90">Noida</span>
                             </h1>
-                            <p className="text-gray-300 text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl mb-6 md:mb-8 leading-relaxed text-center md:text-left">
-                                Where innovation meets community.
+                            <p className="text-gray-300 text-sm md:text-md lg:text-lg max-w-2xl mb-4 md:mb-6 leading-relaxed text-center md:text-left">
+                                Where innovation meets community. <br />
                                 GDG Noida brings developers together through inclusive tech meetups, workshops, and events that inspire growth.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
