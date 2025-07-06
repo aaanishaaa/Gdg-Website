@@ -42,7 +42,7 @@ const BlogInsights: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 py-16 mb-5 px-4">
+    <div id="blogs" className="min-h-screen bg-gray-50 py-16 mb-5 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Hero Section */}
         <div className="text-center mb-16">

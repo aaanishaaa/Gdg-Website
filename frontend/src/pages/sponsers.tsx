@@ -31,7 +31,7 @@ const SponsorsSection: React.FC = () => {
   };
 
   return (
-    <div className="bg-white pt-12">
+    <div id="sponsors-and-partners" className="bg-white pt-12">
       <div className="max-w-5xl mx-auto lg:py-20 text-center">
          <div className="text-center my-12">
           <h1 className="text-6xl md:text-7xl font-bold text-gray-900 mb-10 ">

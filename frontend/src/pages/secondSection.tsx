@@ -48,7 +48,7 @@ export default function SecondSection() {
   return (
     <div>
       {/* Upcoming Events Section */}
-      <section id="events" className="relative z-10 py-20 ">
+      <section id="upcoming-events" className="relative z-10 py-20 ">
         <div className="max-w-7xl mx-auto px-8">
           <div className="text-center mb-12">
             <h2 className="text-gray-900 text-2xl md:text-6xl font-bold mb-4">
@@ -187,16 +187,17 @@ export default function SecondSection() {
         <div className="flex justify-center mb-20 px-5">
           <div className="w-full max-w-8xl aspect-video rounded-2xl overflow-hidden shadow-lg">
             <iframe className="w-full h-full" src="https://www.youtube.com/embed/04dgaxEPow8?si=tBqitdbhLvpkwSbS"
-              title="YouTube video player" frameborder="0"
+              title="YouTube video player" frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
           </div>
         </div>
       </section>
       <section>
         <BlogInsights />
       </section>
-      <div className="text-center mb-5">
+      
+      <div id="community" className="text-center mb-5">
         <h1 className="text-6xl md:text-7xl font-bold text-gray-900 ">
           Community Impact.
         </h1>

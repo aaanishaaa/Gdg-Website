@@ -13,40 +13,64 @@ const navigationData = {
             icon: "Home"
         },
         {
-            id: "events",
-            name: "Events",
-            route: "#events",
+            id: "upcoming-events",
+            name: "Upcoming Events",
+            route: "#upcoming-events",
             icon: "Calendar"
+        },
+        {
+            id: "sponsors-and-partners",
+            name: "Sponsors & Partners",
+            route: "#sponsors-and-partners",
+            icon: "Users"
+        },
+        {
+            id: "blogs",
+            name: "Blogs",
+            route: "#blogs",
+            icon: "BookOpen"
         },
         {
             id: "community",
             name: "Community",
-            route: "/community",
-            icon: "Users"
-        },
-        {
-            id: "resources",
-            name: "Resources",
-            route: "#resources",
+            route: "#community",
             icon: "FileText"
         },
         {
-            id: "blog",
-            name: "Blog",
-            route: "#blog",
-            icon: "BookOpen"
-        },
-        {
-            id: "about",
-            name: "About",
-            route: "#about",
+            id: "gallery",
+            name: "Gallery",
+            route: "#gallery",
             icon: "User"
         }
     ]
 };
 
-export const Footer: React.FC = () => (
-    <div className='p-2 md:p-4'>
+export const Footer: React.FC = () => {
+    const handleNavigationClick = (route: string, e: React.MouseEvent) => {
+        e.preventDefault();
+
+        if (route.startsWith('#')) {
+            // Handle hash links (scroll to section)
+            const targetId = route.substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+
+            // Update URL with hash
+            window.history.pushState(null, '', route);
+        } else if (route.startsWith('/')) {
+            // Handle regular routes (navigate to page)
+            window.location.href = route;
+        }
+    };
+
+    return (
+        <div className='p-2 md:p-4'>
         <footer className="bg-black text-white rounded-b-2xl relative overflow-hidden">
             {/* Custom background */}
             <div
@@ -72,7 +96,11 @@ export const Footer: React.FC = () => (
                         <ul className="space-y-2">
                             {navigationData.navigationItems.map((item) => (
                                 <li key={item.id}>
-                                    <a href={item.route} className="hover:underline">
+                                    <a 
+                                        href={item.route} 
+                                        className="hover:underline cursor-pointer"
+                                        onClick={(e) => handleNavigationClick(item.route, e)}
+                                    >
                                         {item.name}
                                     </a>
                                 </li>
@@ -114,6 +142,7 @@ export const Footer: React.FC = () => (
             </div>
         </footer>
     </div>
-);
+    );
+};
 
 export default Footer;

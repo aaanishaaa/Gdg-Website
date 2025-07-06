@@ -116,7 +116,7 @@ const PhotoGallery: React.FC<PhotoGalleryProps> = ({
   }, [selectedPhoto]);
 
   return (
-    <div>
+    <div id="gallery">
       <div className="max-w-7xl mx-auto rounded-3xl p-12 ">
         {/* Header */}
         <div className="text-center mb-12">

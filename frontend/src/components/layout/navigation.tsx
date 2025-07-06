@@ -16,33 +16,33 @@ const navigationData = {
             icon: "Home"
         },
         {
-            id: "events",
-            name: "Events",
-            route: "#events",
+            id: "upcoming-events",
+            name: "Upcoming Events",
+            route: "#upcoming-events",
             icon: "Calendar"
+        },
+        {
+            id: "sponsors-and-partners",
+            name: "Sponsors & Partners",
+            route: "#sponsors-and-partners",
+            icon: "Users"
+        },
+        {
+            id: "blogs",
+            name: "Blogs",
+            route: "#blogs",
+            icon: "BookOpen"
         },
         {
             id: "community",
             name: "Community",
-            route: "/community",
-            icon: "Users"
-        },
-        {
-            id: "resources",
-            name: "Resources",
-            route: "#resources",
+            route: "#community",
             icon: "FileText"
         },
         {
-            id: "blog",
-            name: "Blog",
-            route: "#blog",
-            icon: "BookOpen"
-        },
-        {
-            id: "about",
-            name: "About",
-            route: "#about",
+            id: "gallery",
+            name: "Gallery",
+            route: "#gallery",
             icon: "User"
         }
     ]
@@ -69,24 +69,24 @@ export default function Navigation() {
 
     const handleNavigationClick = (route: string, e: React.MouseEvent) => {
         e.preventDefault();
-        
+
         // Close dropdown first
         setIsDropdownOpen(false);
-        
+
         // Small delay to ensure dropdown closes before navigation
         setTimeout(() => {
             if (route.startsWith('#')) {
                 // Handle hash links (scroll to section)
                 const targetId = route.substring(1);
                 const targetElement = document.getElementById(targetId);
-                
+
                 if (targetElement) {
                     targetElement.scrollIntoView({
                         behavior: 'smooth',
                         block: 'start'
                     });
                 }
-                
+
                 // Update URL with hash
                 window.history.pushState(null, '', route);
             } else if (route.startsWith('/')) {
@@ -96,7 +96,7 @@ export default function Navigation() {
         }, 100);
     };
 
-    
+
     return (
         <>
             {/* Navigation */}
@@ -109,9 +109,9 @@ export default function Navigation() {
                     {/* Nav Links - Desktop only */}
                     <div className="hidden lg:flex items-center space-x-8">
                         {navigationItems.map((item) => (
-                            <a 
+                            <a
                                 key={item.id}
-                                href={item.route} 
+                                href={item.route}
                                 onClick={(e) => handleNavigationClick(item.route, e)}
                                 className="text-white/80 hover:text-white transition-colors cursor-pointer"
                             >
@@ -130,7 +130,7 @@ export default function Navigation() {
                     >
                         Join Community
                     </Button>
-                    
+
                     {/* Mobile/Tablet - Dropdown Menu */}
                     <div className="lg:hidden">
                         <DropdownMenu open={isDropdownOpen} onOpenChange={setIsDropdownOpen}>
@@ -142,23 +142,23 @@ export default function Navigation() {
                                     {isDropdownOpen ? <X size={32} /> : <Menu size={32} />}
                                 </Button>
                             </DropdownMenuTrigger>
-                            
-                            <DropdownMenuContent 
-                                align="end" 
+
+                            <DropdownMenuContent
+                                align="end"
                                 className="w-56 mt-2 bg-gray-100/95 backdrop-blur-lg border border-white/20 shadow-lg rounded-lg"
                             >
                                 {navigationItems.map((item) => {
                                     const IconComponent = iconMap[item.icon];
                                     return (
-                                        <DropdownMenuItem 
-                                            key={item.id} 
+                                        <DropdownMenuItem
+                                            key={item.id}
                                             onSelect={(e) => {
                                                 // Prevent default dropdown behavior
                                                 e.preventDefault();
                                             }}
                                         >
-                                            <a 
-                                                href={item.route} 
+                                            <a
+                                                href={item.route}
                                                 onClick={(e) => handleNavigationClick(item.route, e)}
                                                 className="flex items-center gap-3 w-full cursor-pointer text-black"
                                             >
