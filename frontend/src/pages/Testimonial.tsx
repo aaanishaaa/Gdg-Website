@@ -17,10 +17,10 @@ const testimonials: Testimonial[] = [
     name: "Cassie Evans",
     username: "@cassiecods",
     avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=64&h=64&fit=crop&crop=face",
-    content: "Not exaggerating when I say Flowfest was my web event of the year. I go to a lot of conferences but the vibes at this little web-nerd fest were immaculate.",
+    content: "Not exaggerating when I say GDG Noida Devfest was my web event of the year. I go to a lot of conferences but the vibes at this little web-nerd fest were immaculate.",
     time: "1:21 PM",
     date: "Jul 12, 2024",
-    tag: "FlowFest Love"
+    tag: "#GDG Noida"
   },
   {
     id: 2,
@@ -30,7 +30,7 @@ const testimonials: Testimonial[] = [
     content: "The workshops were incredible! Finally found a conference that balances technical depth with practical application. Already planning to attend next year.",
     time: "3:45 PM",
     date: "Jul 15, 2024",
-    tag: "GDG Workshop"
+    tag: "#GDG Workshop"
   },
   {
     id: 3,
@@ -40,7 +40,7 @@ const testimonials: Testimonial[] = [
     content: "Best networking event I've been to in years. The intimate setting made it easy to have meaningful conversations with fellow developers.",
     time: "11:30 AM",
     date: "Jul 18, 2024",
-    tag: "Networking Magic"
+    tag: "#Networking Magic"
   },
   {
     id: 4,
@@ -50,7 +50,7 @@ const testimonials: Testimonial[] = [
     content: "GDG Noida events are always top-notch! The community spirit and technical excellence make every session worth attending. Kudos to the organizers!",
     time: "2:15 PM",
     date: "Jul 20, 2024",
-    tag: "Community Love"
+    tag: "#Community Love"
   }
 ];
 

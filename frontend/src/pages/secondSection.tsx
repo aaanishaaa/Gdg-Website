@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Calendar, Users, Code, ChevronRight, Rocket, Section } from "lucide-react";
 import ScrollingTestimonials from "./Testimonial";
 import SponsorsSection from "./sponsers";
+import ResourcesSection from "./blog";
+import BlogInsights from "./blog";
 
 export default function secondSection() {
   const upcomingEvents = [
@@ -159,6 +161,9 @@ export default function secondSection() {
       </section>
       <section>
         <ScrollingTestimonials/>
+      </section>
+      <section>
+        <BlogInsights/>
       </section>
       <section>
         <div className="flex justify-center items-center flex-wrap gap-10 p-8">

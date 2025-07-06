@@ -7,7 +7,7 @@ interface Sponsor {
   logo: string;
 }
 
-const SponsorsSection: React.FC = () => {
+const SponsorsSection: React.FC = () => {``
   const sponsors: Sponsor[] = [
     { id: '1', name: 'Microsoft', website: 'https://microsoft.com', logo: 'https://via.placeholder.com/120x60/f3f4f6/6b7280?text=Logo' },
     { id: '2', name: 'Google', website: 'https://google.com', logo: 'https://via.placeholder.com/120x60/f3f4f6/6b7280?text=Logo' },
@@ -25,19 +25,19 @@ const SponsorsSection: React.FC = () => {
 
   return (
     <div className="bg-white">
-      <div className="max-w-6xl mx-auto px-10 lg:py-24 text-center">
-        <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
+      <div className="max-w-5xl mx-auto lg:py-20 text-center">
+        <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-2 tracking-tight">
           Sponsors & Partners
         </h2>
-        <p className="text-lg text-gray-600 mb-16 lg:mb-20 font-normal">
+        <p className="text-lg text-gray-600  lg:mb-20 font-normal">
           Learn, build, and grow with the community
         </p>
         
-        <div className="relative overflow-hidden mx-[-20px] py-5">
+        <div className="relative overflow-hidden mx-[-50px] ">
           <div 
-            className="flex gap-10 px-5 hover:[animation-play-state:paused]"
+            className="flex gap-10 px-2 hover:[animation-play-state:paused]"
             style={{
-              animation: 'scroll 40s linear infinite'
+              animation: 'scroll 20s linear infinite'
             }}
           >
             {/* First set of sponsors */}
@@ -45,7 +45,7 @@ const SponsorsSection: React.FC = () => {
               <div
                 key={sponsor.id}
                 onClick={() => handleSponsorClick(sponsor.website)}
-                className="flex-shrink-0 w-44 h-24 bg-white rounded-xl flex items-center justify-center cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1 grayscale opacity-40 hover:grayscale-0 hover:opacity-100"
+                className="flex-shrink-0 w-44 h-24 bg-white rounded-xl flex items-center justify-center cursor-pointer transition-all duration-300  hover:-translate-y-2  hover:grayscale-0 hover:opacity-100"
               >
                 <img
                   src={sponsor.logo}
@@ -60,7 +60,7 @@ const SponsorsSection: React.FC = () => {
               <div
                 key={`duplicate-${sponsor.id}`}
                 onClick={() => handleSponsorClick(sponsor.website)}
-                className="flex-shrink-0 w-44 h-24 bg-white flex items-center justify-center cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1  grayscale opacity-40 hover:grayscale-0 hover:opacity-100"
+                className="flex-shrink-0 w-44 h-24 bg-white flex items-center justify-center cursor-pointer transition-all duration-300 hover:-translate-y-1   hover:grayscale-0 hover:opacity-100"
               >
                 <img 
                   src={sponsor.logo}
