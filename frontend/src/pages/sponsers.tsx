@@ -25,7 +25,7 @@ const SponsorsSection: React.FC = () => {
 
   return (
     <div className="bg-white">
-      <div className="max-w-6xl mx-auto px-10 py-20 lg:py-24 text-center">
+      <div className="max-w-6xl mx-auto px-10 lg:py-24 text-center">
         <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
           Sponsors & Partners
         </h2>
@@ -45,7 +45,7 @@ const SponsorsSection: React.FC = () => {
               <div
                 key={sponsor.id}
                 onClick={() => handleSponsorClick(sponsor.website)}
-                className="flex-shrink-0 w-44 h-24 bg-white border border-gray-200 rounded-xl flex items-center justify-center cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-gray-300 grayscale opacity-40 hover:grayscale-0 hover:opacity-100"
+                className="flex-shrink-0 w-44 h-24 bg-white rounded-xl flex items-center justify-center cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1 grayscale opacity-40 hover:grayscale-0 hover:opacity-100"
               >
                 <img
                   src={sponsor.logo}
@@ -60,7 +60,7 @@ const SponsorsSection: React.FC = () => {
               <div
                 key={`duplicate-${sponsor.id}`}
                 onClick={() => handleSponsorClick(sponsor.website)}
-                className="flex-shrink-0 w-44 h-24 bg-white flex items-center justify-center cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-gray-300 grayscale opacity-40 hover:grayscale-0 hover:opacity-100"
+                className="flex-shrink-0 w-44 h-24 bg-white flex items-center justify-center cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1  grayscale opacity-40 hover:grayscale-0 hover:opacity-100"
               >
                 <img 
                   src={sponsor.logo}

@@ -34,7 +34,7 @@ const GDGNoidaWebsite: React.FC = () => {
                 backgroundSize: "100% 100%, 100% 100%, 100% 100%, 100% 100%",
                 backgroundRepeat: "no-repeat",
                 opacity: 0.6,
-                filter: "blur(200px)",
+                filter: "blur(10px)",
               }}
             />
           </div>
