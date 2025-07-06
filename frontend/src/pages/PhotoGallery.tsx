@@ -16,9 +16,9 @@ const PhotoGallery: React.FC<PhotoGalleryProps> = ({
   photos = [], 
   photosPerLoad = 3
 }) => {
-  const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
   const [displayedPhotos, setDisplayedPhotos] = useState<Photo[]>([]);
   const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   // Default photos if none provided
   const defaultPhotos: Photo[] = [
@@ -58,7 +58,7 @@ const PhotoGallery: React.FC<PhotoGalleryProps> = ({
       date: 'September 30, 2023'
     },
     {
-      src: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=400&h=300&fit=crop',
+      src: 'https://images.unsplash.com/photo-1517245386807-bb43f82c4?w=400&h=300&fit=crop',
       title: 'AI & Ethics Discussion',
       date: 'August 20, 2023'
     },
@@ -71,19 +71,25 @@ const PhotoGallery: React.FC<PhotoGalleryProps> = ({
 
   const photoData = photos.length > 0 ? photos : defaultPhotos;
 
+  // Load initial photos
   useEffect(() => {
-    loadPhotos();
-  }, []);
-
-  const loadPhotos = () => {
-    const endIndex = Math.min(currentPhotoIndex + photosPerLoad, photoData.length);
-    const newPhotos = photoData.slice(currentPhotoIndex, endIndex);
-    setDisplayedPhotos(prev => [...prev, ...newPhotos]);
-    setCurrentPhotoIndex(endIndex);
-  };
+    const initialPhotos = photoData.slice(0, photosPerLoad);
+    setDisplayedPhotos(initialPhotos);
+  }, [photoData, photosPerLoad]);
 
   const loadMorePhotos = () => {
-    loadPhotos();
+    if (isLoading) return; // Prevent multiple clicks
+    
+    setIsLoading(true);
+    
+    const currentCount = displayedPhotos.length;
+    const nextBatch = photoData.slice(currentCount, currentCount + photosPerLoad);
+    
+    // Add a small delay to prevent race conditions
+    setTimeout(() => {
+      setDisplayedPhotos(prev => [...prev, ...nextBatch]);
+      setIsLoading(false);
+    }, 100);
   };
 
   const openModal = (src: string) => {
@@ -94,7 +100,7 @@ const PhotoGallery: React.FC<PhotoGalleryProps> = ({
     setSelectedPhoto(null);
   };
 
-  const hasMorePhotos = currentPhotoIndex < photoData.length;
+  const hasMorePhotos = displayedPhotos.length < photoData.length;
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -128,7 +134,7 @@ const PhotoGallery: React.FC<PhotoGalleryProps> = ({
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           {displayedPhotos.map((photo, index) => (
             <div
-              key={index}
+              key={`${photo.src}-${index}`} // Better key to prevent React issues
               className="group relative aspect-[4/3] rounded-xl overflow-hidden cursor-pointer transition-all duration-300 ease-out hover:-translate-y-2 shadow-lg hover:shadow-2xl border border-black"
               onClick={() => openModal(photo.src)}
             >
@@ -157,9 +163,12 @@ const PhotoGallery: React.FC<PhotoGalleryProps> = ({
           <div className="text-center">
             <button
               onClick={loadMorePhotos}
-              className="px-8 py-4 bg-blue-500 text-white rounded-full text-sm font-medium uppercase tracking-wider transition-all duration-300 hover:bg-yellow-400 hover:text-white hover:-translate-y-1 hover:shadow-lg"
+              disabled={isLoading}
+              className={`px-8 py-4 bg-blue-500 text-white rounded-full text-sm font-medium uppercase tracking-wider transition-all duration-300 hover:bg-yellow-400 hover:text-white hover:-translate-y-1 hover:shadow-lg ${
+                isLoading ? 'opacity-50 cursor-not-allowed' : ''
+              }`}
             >
-              Load More Photos
+              {isLoading ? 'Loading...' : 'Load More Photos'}
             </button>
           </div>
         )}
