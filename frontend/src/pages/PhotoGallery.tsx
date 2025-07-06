@@ -39,7 +39,7 @@ const PhotoGallery: React.FC<PhotoGalleryProps> = ({
       date: 'January 20, 2024'
     },
     {
-      src: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=400&h=300&fit=crop',
+      src: blog1,
       title: 'Flutter Development Meetup',
       date: 'December 10, 2023'
     },
