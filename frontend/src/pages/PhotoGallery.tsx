@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import blog1 from '../assets/photos/blog1.png'; 
-
+import blog2 from '../assets/photos/blog2.png'; 
+import blog3 from '../assets/photos/blog3.png';
 interface Photo {
   src: string;
   title: string;
@@ -24,17 +25,17 @@ const PhotoGallery: React.FC<PhotoGalleryProps> = ({
   const defaultPhotos: Photo[] = [
     {
       src: blog1,
-      title: 'Android Development Workshop',
-      date: 'March 15, 2024'
+      title: 'Devfest 2024',
+      date: 'December 15, 2024'
     },
     {
-      src: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&h=300&fit=crop',
-      title: 'Machine Learning Bootcamp',
+      src: blog2,
+      title: 'IWD Event 2024',
       date: 'February 28, 2024'
     },
     {
-      src: 'https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=400&h=300&fit=crop',
-      title: 'Cloud Computing Seminar',
+      src: blog3,
+      title: 'Design Samwaad',
       date: 'January 20, 2024'
     },
     {
