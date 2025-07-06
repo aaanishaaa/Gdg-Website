@@ -1,10 +1,11 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { Calendar, Users, Code, ChevronRight, Rocket, Section } from "lucide-react";
+import { Calendar, Users, Code, ChevronRight, Rocket } from "lucide-react";
 import ScrollingTestimonials from "./Testimonial";
 import SponsorsSection from "./sponsers";
-import ResourcesSection from "./blog";
 import BlogInsights from "./blog";
+// import keynote from "../assets/videos/keynote.mp4";
+
 
 export default function secondSection() {
   const upcomingEvents = [
@@ -161,6 +162,26 @@ export default function secondSection() {
       </section>
       <section>
         <ScrollingTestimonials/>
+      </section>
+      <section>
+        <div className="text-center mb-16">
+          <h1 className="text-6xl md:text-7xl font-bold text-gray-900 mb-10 ">
+        Together We Build
+          </h1>
+        </div>
+        <div className="flex justify-center mb-20 px-5">
+          <div className="w-full max-w-8xl aspect-video rounded-2xl overflow-hidden shadow-lg ">
+        <video
+          // src={keynote}
+          title="GDG Noida Event Video"
+          controls
+          autoPlay
+          muted
+          loop
+          className="w-full h-full"
+        />
+          </div>
+        </div>
       </section>
       <section>
         <BlogInsights/>

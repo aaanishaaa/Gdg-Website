@@ -60,7 +60,7 @@ const BlogInsights: React.FC = () => {
 
         {/* Blog Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {blogPosts.map((post, index) => (
+          {blogPosts.map((post) => (
             <div key={post.id} className="group cursor-pointer">
               <div className="relative overflow-hidden rounded-3xl aspect-[4/3] mb-6">
                 {/* Background Image */}
@@ -101,13 +101,6 @@ const BlogInsights: React.FC = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Use for Free Button */}
-        <div className="fixed bottom-6 right-6">
-          <button className="px-6 py-3 bg-black text-white rounded-full hover:bg-gray-800 transition-colors duration-200 flex items-center space-x-2 shadow-lg">
-            <span className="text-sm font-medium">📥 Use for Free</span>
-          </button>
         </div>
       </div>
     </div>
