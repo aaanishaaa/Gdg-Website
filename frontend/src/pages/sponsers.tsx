@@ -33,9 +33,11 @@ const SponsorsSection: React.FC = () => {
   return (
     <div className="bg-white pt-12">
       <div className="max-w-5xl mx-auto lg:py-20 text-center">
-        <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-2 tracking-tight">
-          Sponsors & Partners
-        </h2>
+         <div className="text-center my-12">
+          <h1 className="text-6xl md:text-7xl font-bold text-gray-900 mb-10 ">
+            Sponsors & Partners
+          </h1>
+        </div>
         <p className="text-lg text-gray-600  lg:mb-20 font-normal">
           Learn, build, and grow with the community
         </p>
