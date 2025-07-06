@@ -42,7 +42,7 @@ const SponsorsSection: React.FC = () => {
           Learn, build, and grow with the community
         </p>
         
-        <div className="relative overflow-hidden mx-[-50px] ">
+        <div className="relative overflow-hidden">
           <div 
             className="flex gap-10 px-2 hover:[animation-play-state:paused]"
             style={{

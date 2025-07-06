@@ -49,9 +49,9 @@ export default function SecondSection() {
     <div>
       {/* Upcoming Events Section */}
       <section id="upcoming-events" className="relative z-10 py-20 ">
-        <div className="max-w-7xl mx-auto px-8">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-gray-900 text-2xl md:text-6xl font-bold mb-4">
+            <h2 className="text-gray-900 text-3xl md:text-6xl font-bold mb-4">
               Upcoming Events
             </h2>
             <p className="text-gray-600 text-lg">
@@ -123,7 +123,7 @@ export default function SecondSection() {
 
       {/* Community Features */}
       <section className="relative z-10 ">
-        <div className="max-w-7xl mx-auto px-8">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="grid md:grid-cols-3 gap-6">
             <div className="group">
               <div className="bg-white rounded-3xl p-8 border-2 border-black hover:border-gray-300 hover:shadow-lg transition-all duration-300 h-full">
@@ -180,11 +180,11 @@ export default function SecondSection() {
 
       <section>
         <div className="text-center my-12">
-          <h1 className="text-6xl md:text-7xl font-bold text-gray-900 mb-10 ">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-10 px-4">
             Together We Build
           </h1>
         </div>
-        <div className="flex justify-center mb-20 px-5">
+        <div className="flex justify-center mb-20 px-4 md:px-5">
           <div className="w-full max-w-8xl aspect-video rounded-2xl overflow-hidden shadow-lg">
             <iframe className="w-full h-full" src="https://www.youtube.com/embed/04dgaxEPow8?si=tBqitdbhLvpkwSbS"
               title="YouTube video player" frameBorder="0"
@@ -197,17 +197,17 @@ export default function SecondSection() {
         <BlogInsights />
       </section>
       
-      <div id="community" className="text-center mb-5">
-        <h1 className="text-6xl md:text-7xl font-bold text-gray-900 ">
+      <div id="community" className="text-center mb-5 px-4">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900">
           Community Impact.
         </h1>
       </div>
       <section className="pb-5">
-        <div className="flex flex-col items-center gap-20 p-8 max-w-1xl mx-auto">
+        <div className="flex flex-col items-center gap-10 md:gap-20 p-4 md:p-8 max-w-6xl mx-auto">
           {/* Top row */}
-          <div className="flex flex-wrap justify-center gap-20 w-full">
+          <div className="flex flex-wrap justify-center gap-8 md:gap-20 w-full">
             <div
-              className="w-70 h-52 group cursor-pointer"
+              className="w-60 md:w-70 h-40 md:h-52 group cursor-pointer"
               style={{ perspective: "1000px" }}
               onMouseEnter={() => handleCardFlip('members')}
               onMouseLeave={() => handleCardFlip('members')}
@@ -224,7 +224,7 @@ export default function SecondSection() {
                   className="absolute w-full h-full bg-red-500 text-white flex items-center justify-center rounded-lg text-3xl md:text-4xl font-bold"
                   style={{ backfaceVisibility: "hidden" }}
                 >
-                  <p className="text-3xl md:text-4xl font-bold text-center">Total <br /> members</p>
+                  <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-center">Total <br /> members</p>
                 </div>
 
                 {/* Back Side */}
@@ -235,12 +235,12 @@ export default function SecondSection() {
                     transform: "rotateY(180deg)",
                   }}
                 >
-                  <p className="text-4xl md:text-5xl font-bold">40+</p>
+                  <p className="text-3xl md:text-4xl lg:text-5xl font-bold">40+</p>
                 </div>
               </div>
             </div>
             <div
-              className="w-70 h-52 group cursor-pointer"
+              className="w-60 md:w-70 h-40 md:h-52 group cursor-pointer"
               style={{ perspective: "1000px" }}
               onMouseEnter={() => handleCardFlip('impacted')}
               onMouseLeave={() => handleCardFlip('impacted')}
@@ -257,7 +257,7 @@ export default function SecondSection() {
                   className="absolute w-full h-full bg-blue-500 text-white flex items-center justify-center rounded-lg text-3xl md:text-4xl font-bold"
                   style={{ backfaceVisibility: "hidden" }}
                 >
-                  <p className="text-3xl md:text-4xl font-bold text-center">People <br /> Impacted</p>
+                  <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-center">People <br /> Impacted</p>
                 </div>
 
                 {/* Back Side */}
@@ -268,15 +268,15 @@ export default function SecondSection() {
                     transform: "rotateY(180deg)",
                   }}
                 >
-                  <p className="text-4xl md:text-5xl font-bold">10k+</p>
+                  <p className="text-3xl md:text-4xl lg:text-5xl font-bold">10k+</p>
                 </div>
               </div>
             </div>
           </div>
           {/* Bottom row */}
-          <div className="flex flex-wrap justify-center gap-20 w-full">
+          <div className="flex flex-wrap justify-center gap-8 md:gap-20 w-full">
             <div
-              className="w-70 h-52 group cursor-pointer"
+              className="w-60 md:w-70 h-40 md:h-52 group cursor-pointer"
               style={{ perspective: "1000px" }}
               onMouseEnter={() => handleCardFlip('events')}
               onMouseLeave={() => handleCardFlip('events')}
@@ -293,7 +293,7 @@ export default function SecondSection() {
                   className="absolute w-full h-full bg-yellow-400 text-white flex items-center justify-center rounded-lg text-3xl md:text-4xl font-bold"
                   style={{ backfaceVisibility: "hidden" }}
                 >
-                  <p className="text-3xl md:text-4xl font-bold text-center">Events <br /> hosted</p>
+                  <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-center">Events <br /> hosted</p>
                 </div>
 
                 {/* Back Side */}
@@ -304,12 +304,12 @@ export default function SecondSection() {
                     transform: "rotateY(180deg)",
                   }}
                 >
-                  <p className="text-4xl md:text-5xl font-bold">35+</p>
+                  <p className="text-3xl md:text-4xl lg:text-5xl font-bold">35+</p>
                 </div>
               </div>
             </div>
             <div
-              className="w-70 h-52 group cursor-pointer"
+              className="w-60 md:w-70 h-40 md:h-52 group cursor-pointer"
               style={{ perspective: "1000px" }}
               onMouseEnter={() => handleCardFlip('workshops')}
               onMouseLeave={() => handleCardFlip('workshops')}
@@ -326,7 +326,7 @@ export default function SecondSection() {
                   className="absolute w-full h-full bg-green-500 text-white flex items-center justify-center rounded-lg text-3xl md:text-4xl font-bold"
                   style={{ backfaceVisibility: "hidden" }}
                 >
-                  <p className="text-2xl md:text-3xl font-bold text-center">Workshops <br /> Hours Run</p>
+                  <p className="text-xl md:text-2xl lg:text-3xl font-bold text-center">Workshops <br /> Hours Run</p>
                 </div>
 
                 {/* Back Side */}
@@ -337,7 +337,7 @@ export default function SecondSection() {
                     transform: "rotateY(180deg)",
                   }}
                 >
-                  <p className="text-4xl md:text-5xl font-bold">150 Hrs+</p>
+                  <p className="text-3xl md:text-4xl lg:text-5xl font-bold">150 Hrs+</p>
                 </div>
               </div>
             </div>
@@ -349,7 +349,7 @@ export default function SecondSection() {
       </section>
       {/* CTA Section */}
       <section className="relative z-10 py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-8 text-center">
+        <div className="max-w-4xl mx-auto px-4 md:px-8 text-center">
           <div className="bg-gray-50 rounded-3xl p-12 border border-gray-200">
             <h2 className="text-gray-900 text-3xl md:text-4xl mb-4">
               Ready to join the community?
