@@ -161,24 +161,18 @@ export default function secondSection() {
       <section>
             <SponsorsSection/>
       </section>
-      <section>
+      {/* <section>
         <ScrollingTestimonials/>
-      </section>
+      </section> */}
       <section>
-        <div className="text-center mb-16">
+        <div className="text-center my-12">
           <h1 className="text-6xl md:text-7xl font-bold text-gray-900 mb-10 ">
         Together We Build
           </h1>
         </div>
         <div className="flex justify-center mb-20 px-5">
   <div className="w-full max-w-8xl aspect-video rounded-2xl overflow-hidden shadow-lg">
-    <iframe
-      src="https://drive.google.com/file/d/1cbellINsVGslloDHF13UO0pHkGsZWMYs/view?usp=sharing"
-      title="GDG Noida Event Video"
-      className="w-full h-full"
-      allow="autoplay; encrypted-media"
-      allowFullScreen
-    />
+    <iframe className="w-full h-full"  src="https://www.youtube.com/embed/04dgaxEPow8?si=tBqitdbhLvpkwSbS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
         </div>
       </section>

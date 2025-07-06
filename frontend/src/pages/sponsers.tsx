@@ -7,7 +7,7 @@ interface Sponsor {
   logo: string;
 }
 
-const SponsorsSection: React.FC = () => {``
+const SponsorsSection: React.FC = () => {
   const sponsors: Sponsor[] = [
     { id: '1', name: 'Microsoft', website: 'https://microsoft.com', logo: 'https://via.placeholder.com/120x60/f3f4f6/6b7280?text=Logo' },
     { id: '2', name: 'Google', website: 'https://google.com', logo: 'https://via.placeholder.com/120x60/f3f4f6/6b7280?text=Logo' },
@@ -24,7 +24,7 @@ const SponsorsSection: React.FC = () => {``
   };
 
   return (
-    <div className="bg-white">
+    <div className="bg-white pt-12">
       <div className="max-w-5xl mx-auto lg:py-20 text-center">
         <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-2 tracking-tight">
           Sponsors & Partners
