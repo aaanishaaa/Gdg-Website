@@ -1,6 +1,7 @@
 import React from 'react';
 import { Instagram, Twitter, Linkedin, Youtube } from 'lucide-react';
 import GDGLogo from '@/assets/logo/gdg-logo.png'; // adjust to your actual logo path
+import Static from '@/assets/bg/static.png';
 
 // Navigation data (same as in navigation.tsx)
 const navigationData = {
@@ -50,7 +51,8 @@ export const Footer: React.FC = () => (
             {/* Custom background */}
             <div
                 style={{
-                    background: "url('https://framerusercontent.com/images/rR6HYXBrMmX4cRpXfXUOvpvpB0.png')",
+                    // background: "url('https://framerusercontent.com/images/rR6HYXBrMmX4cRpXfXUOvpvpB0.png')",
+                    backgroundImage: `url(${Static})`,
                     opacity: 0.2,
                     inset: "-200%",
                     width: "400%",
