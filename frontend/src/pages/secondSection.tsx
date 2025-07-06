@@ -186,13 +186,10 @@ export default function SecondSection() {
         </div>
         <div className="flex justify-center mb-20 px-5">
           <div className="w-full max-w-8xl aspect-video rounded-2xl overflow-hidden shadow-lg">
-            <iframe
-              src="https://www.youtube.com/watch?v=04dgaxEPow8"
-              title="GDG Noida Event Video"
-              className="w-full h-full"
+            <iframe className="w-full h-full" src="https://www.youtube.com/embed/04dgaxEPow8?si=tBqitdbhLvpkwSbS"
+              title="YouTube video player" frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            />
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           </div>
         </div>
       </section>
@@ -208,15 +205,15 @@ export default function SecondSection() {
         <div className="flex flex-col items-center gap-20 p-8 max-w-1xl mx-auto">
           {/* Top row */}
           <div className="flex flex-wrap justify-center gap-20 w-full">
-            <div 
-              className="w-70 h-52 group cursor-pointer" 
+            <div
+              className="w-70 h-52 group cursor-pointer"
               style={{ perspective: "1000px" }}
               onMouseEnter={() => handleCardFlip('members')}
               onMouseLeave={() => handleCardFlip('members')}
             >
               <div
                 className="w-full h-full relative transition-transform duration-1000"
-                style={{ 
+                style={{
                   transformStyle: "preserve-3d",
                   transform: flippedCards.members ? "rotateY(180deg)" : "rotateY(0deg)"
                 }}
@@ -241,15 +238,15 @@ export default function SecondSection() {
                 </div>
               </div>
             </div>
-            <div 
-              className="w-70 h-52 group cursor-pointer" 
+            <div
+              className="w-70 h-52 group cursor-pointer"
               style={{ perspective: "1000px" }}
               onMouseEnter={() => handleCardFlip('impacted')}
               onMouseLeave={() => handleCardFlip('impacted')}
             >
               <div
                 className="w-full h-full relative transition-transform duration-1000"
-                style={{ 
+                style={{
                   transformStyle: "preserve-3d",
                   transform: flippedCards.impacted ? "rotateY(180deg)" : "rotateY(0deg)"
                 }}
@@ -277,15 +274,15 @@ export default function SecondSection() {
           </div>
           {/* Bottom row */}
           <div className="flex flex-wrap justify-center gap-20 w-full">
-            <div 
-              className="w-70 h-52 group cursor-pointer" 
+            <div
+              className="w-70 h-52 group cursor-pointer"
               style={{ perspective: "1000px" }}
               onMouseEnter={() => handleCardFlip('events')}
               onMouseLeave={() => handleCardFlip('events')}
             >
               <div
                 className="w-full h-full relative transition-transform duration-1000"
-                style={{ 
+                style={{
                   transformStyle: "preserve-3d",
                   transform: flippedCards.events ? "rotateY(180deg)" : "rotateY(0deg)"
                 }}
@@ -310,15 +307,15 @@ export default function SecondSection() {
                 </div>
               </div>
             </div>
-            <div 
-              className="w-70 h-52 group cursor-pointer" 
+            <div
+              className="w-70 h-52 group cursor-pointer"
               style={{ perspective: "1000px" }}
               onMouseEnter={() => handleCardFlip('workshops')}
               onMouseLeave={() => handleCardFlip('workshops')}
             >
               <div
                 className="w-full h-full relative transition-transform duration-1000"
-                style={{ 
+                style={{
                   transformStyle: "preserve-3d",
                   transform: flippedCards.workshops ? "rotateY(180deg)" : "rotateY(0deg)"
                 }}
@@ -350,21 +347,21 @@ export default function SecondSection() {
         <PhotoGallery />
       </section>
       {/* CTA Section */}
-   <section className="relative z-10 py-20 bg-white">
-      <div className="max-w-4xl mx-auto px-8 text-center">
-        <div className="bg-gray-50 rounded-3xl p-12 border border-gray-200">
-          <h2 className="text-gray-900 text-3xl md:text-4xl mb-4">
-            Ready to join the community?
-          </h2>
-          <p className="text-gray-600 text-lg mb-8">
-            Be part of something bigger. Learn, grow, and build amazing things together.
-          </p>
-          <button className="bg-green-500 hover:bg-yellow-400 text-white font-medium py-3 px-8 rounded-full transition-colors">
-            Join GDG Noida
-          </button>
+      <section className="relative z-10 py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-8 text-center">
+          <div className="bg-gray-50 rounded-3xl p-12 border border-gray-200">
+            <h2 className="text-gray-900 text-3xl md:text-4xl mb-4">
+              Ready to join the community?
+            </h2>
+            <p className="text-gray-600 text-lg mb-8">
+              Be part of something bigger. Learn, grow, and build amazing things together.
+            </p>
+            <button className="bg-green-500 hover:bg-yellow-400 text-white font-medium py-3 px-8 rounded-full transition-colors">
+              Join GDG Noida
+            </button>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
     </div>
   );
 }
