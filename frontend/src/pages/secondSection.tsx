@@ -350,25 +350,21 @@ export default function SecondSection() {
         <PhotoGallery />
       </section>
       {/* CTA Section */}
-      <section className="relative z-10 py-20">
-        <div className="max-w-4xl mx-auto px-8 text-center">
-          <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl p-12 border border-gray-200">
-            <h2 className="text-gray-900 text-3xl md:text-4xl font-light mb-4">
-              Ready to join the community?
-            </h2>
-            <p className="text-gray-600 text-lg mb-8">
-              Be part of something bigger. Learn, grow, and build amazing things
-              together.
-            </p>
-            <Button
-              size="lg"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-full px-8"
-            >
-              Join GDG Noida
-            </Button>
-          </div>
+   <section className="relative z-10 py-20 bg-white">
+      <div className="max-w-4xl mx-auto px-8 text-center">
+        <div className="bg-gray-50 rounded-3xl p-12 border border-gray-200">
+          <h2 className="text-gray-900 text-3xl md:text-4xl mb-4">
+            Ready to join the community?
+          </h2>
+          <p className="text-gray-600 text-lg mb-8">
+            Be part of something bigger. Learn, grow, and build amazing things together.
+          </p>
+          <button className="bg-green-500 hover:bg-yellow-400 text-white font-medium py-3 px-8 rounded-full transition-colors">
+            Join GDG Noida
+          </button>
         </div>
-      </section>
+      </div>
+    </section>
     </div>
   );
 }
