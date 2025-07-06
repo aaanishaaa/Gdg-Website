@@ -1,13 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Calendar, Users, Code, ChevronRight, Rocket } from "lucide-react";
-import ScrollingTestimonials from "./Testimonial";
+// import ScrollingTestimonials from "./Testimonial";
 import SponsorsSection from "./sponsers";
 import BlogInsights from "./blog";
 import PhotoGallery from "./PhotoGallery";
 // import keynote from "../assets/videos/keynote.mp4";
 
-export default function secondSection() {
+export default function SecondSection() {
+  const [flippedCards, setFlippedCards] = useState({
+    members: false,
+    impacted: false,
+    events: false,
+    workshops: false,
+  });
+
+  const handleCardFlip = (cardName: keyof typeof flippedCards) => {
+    setFlippedCards(prev => ({
+      ...prev,
+      [cardName]: !prev[cardName]
+    }));
+  };
+
   const upcomingEvents = [
     {
       id: 1,
@@ -194,25 +208,25 @@ export default function secondSection() {
         <div className="flex flex-col items-center gap-20 p-8 max-w-1xl mx-auto">
           {/* Top row */}
           <div className="flex flex-wrap justify-center gap-20 w-full">
-            <div className="w-70 h-52 group" style={{ perspective: "1000px" }}>
+            <div 
+              className="w-70 h-52 group cursor-pointer" 
+              style={{ perspective: "1000px" }}
+              onMouseEnter={() => handleCardFlip('members')}
+              onMouseLeave={() => handleCardFlip('members')}
+            >
               <div
                 className="w-full h-full relative transition-transform duration-1000"
-                style={{ transformStyle: "preserve-3d" }}
-                onMouseEnter={(e) =>
-                  (e.currentTarget.style.transform = "rotateY(180deg)")
-                }
-                onMouseLeave={(e) =>
-                  (e.currentTarget.style.transform = "rotateY(0deg)")
-                }
+                style={{ 
+                  transformStyle: "preserve-3d",
+                  transform: flippedCards.members ? "rotateY(180deg)" : "rotateY(0deg)"
+                }}
               >
                 {/* Front Side */}
                 <div
                   className="absolute w-full h-full bg-red-500 text-white flex items-center justify-center rounded-lg text-3xl md:text-4xl font-bold"
                   style={{ backfaceVisibility: "hidden" }}
                 >
-                  <p className="text-3xl md:text-4xl font-bold text-center">
-                    Total <br /> members
-                  </p>
+                  <p className="text-3xl md:text-4xl font-bold text-center">Total <br /> members</p>
                 </div>
 
                 {/* Back Side */}
@@ -227,25 +241,25 @@ export default function secondSection() {
                 </div>
               </div>
             </div>
-            <div className="w-70 h-52 group" style={{ perspective: "1000px" }}>
+            <div 
+              className="w-70 h-52 group cursor-pointer" 
+              style={{ perspective: "1000px" }}
+              onMouseEnter={() => handleCardFlip('impacted')}
+              onMouseLeave={() => handleCardFlip('impacted')}
+            >
               <div
                 className="w-full h-full relative transition-transform duration-1000"
-                style={{ transformStyle: "preserve-3d" }}
-                onMouseEnter={(e) =>
-                  (e.currentTarget.style.transform = "rotateY(180deg)")
-                }
-                onMouseLeave={(e) =>
-                  (e.currentTarget.style.transform = "rotateY(0deg)")
-                }
+                style={{ 
+                  transformStyle: "preserve-3d",
+                  transform: flippedCards.impacted ? "rotateY(180deg)" : "rotateY(0deg)"
+                }}
               >
                 {/* Front Side */}
                 <div
                   className="absolute w-full h-full bg-blue-500 text-white flex items-center justify-center rounded-lg text-3xl md:text-4xl font-bold"
                   style={{ backfaceVisibility: "hidden" }}
                 >
-                  <p className="text-3xl md:text-4xl font-bold text-center">
-                    People <br /> Impacted
-                  </p>
+                  <p className="text-3xl md:text-4xl font-bold text-center">People <br /> Impacted</p>
                 </div>
 
                 {/* Back Side */}
@@ -263,25 +277,25 @@ export default function secondSection() {
           </div>
           {/* Bottom row */}
           <div className="flex flex-wrap justify-center gap-20 w-full">
-            <div className="w-70 h-52 group" style={{ perspective: "1000px" }}>
+            <div 
+              className="w-70 h-52 group cursor-pointer" 
+              style={{ perspective: "1000px" }}
+              onMouseEnter={() => handleCardFlip('events')}
+              onMouseLeave={() => handleCardFlip('events')}
+            >
               <div
                 className="w-full h-full relative transition-transform duration-1000"
-                style={{ transformStyle: "preserve-3d" }}
-                onMouseEnter={(e) =>
-                  (e.currentTarget.style.transform = "rotateY(180deg)")
-                }
-                onMouseLeave={(e) =>
-                  (e.currentTarget.style.transform = "rotateY(0deg)")
-                }
+                style={{ 
+                  transformStyle: "preserve-3d",
+                  transform: flippedCards.events ? "rotateY(180deg)" : "rotateY(0deg)"
+                }}
               >
                 {/* Front Side */}
                 <div
                   className="absolute w-full h-full bg-yellow-400 text-white flex items-center justify-center rounded-lg text-3xl md:text-4xl font-bold"
                   style={{ backfaceVisibility: "hidden" }}
                 >
-                  <p className="text-3xl md:text-4xl font-bold text-center">
-                    Events <br /> hosted
-                  </p>
+                  <p className="text-3xl md:text-4xl font-bold text-center">Events <br /> hosted</p>
                 </div>
 
                 {/* Back Side */}
@@ -296,25 +310,25 @@ export default function secondSection() {
                 </div>
               </div>
             </div>
-            <div className="w-70 h-52 group" style={{ perspective: "1000px" }}>
+            <div 
+              className="w-70 h-52 group cursor-pointer" 
+              style={{ perspective: "1000px" }}
+              onMouseEnter={() => handleCardFlip('workshops')}
+              onMouseLeave={() => handleCardFlip('workshops')}
+            >
               <div
                 className="w-full h-full relative transition-transform duration-1000"
-                style={{ transformStyle: "preserve-3d" }}
-                onMouseEnter={(e) =>
-                  (e.currentTarget.style.transform = "rotateY(180deg)")
-                }
-                onMouseLeave={(e) =>
-                  (e.currentTarget.style.transform = "rotateY(0deg)")
-                }
+                style={{ 
+                  transformStyle: "preserve-3d",
+                  transform: flippedCards.workshops ? "rotateY(180deg)" : "rotateY(0deg)"
+                }}
               >
                 {/* Front Side */}
                 <div
                   className="absolute w-full h-full bg-green-500 text-white flex items-center justify-center rounded-lg text-3xl md:text-4xl font-bold"
                   style={{ backfaceVisibility: "hidden" }}
                 >
-                  <p className="text-2xl md:text-3xl font-bold text-center">
-                    Workshops <br /> Hours Run
-                  </p>
+                  <p className="text-2xl md:text-3xl font-bold text-center">Workshops <br /> Hours Run</p>
                 </div>
 
                 {/* Back Side */}

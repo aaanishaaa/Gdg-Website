@@ -50,7 +50,7 @@ const GDGNoidaWebsite: React.FC = () => {
                                 <div className="relative">
                                     {/* Dark background behind card to make it pop */}
                                     <div className="absolute inset-0 bg-gray-900/80 rounded-2xl blur-xl scale-110" />
-                                    
+
                                     <div className="relative bg-gradient-to-br from-white/10 via-blue-500/10 to-blue-900/20 backdrop-blur-2xl rounded-2xl px-2 md:px-10 py-4 md:py-8 border border-white/20 shadow-lg max-w-xs md:max-w-sm w-65 md:w-80 transition-all duration-300 hover:scale-105 hover:shadow-[#34A853]">
                                         <h2 className="text-white text-xl md:text-2xl font-medium mb-4 flex items-center gap-2">
                                             <Sparkles className="w-6 h-6 text-yellow-400 animate-pulse" />
@@ -60,10 +60,10 @@ const GDGNoidaWebsite: React.FC = () => {
                                             <div className="flex items-center justify-between group">
                                                 <div>
                                                     <p className="text-gray-300 text-xs md:text-sm font-medium tracking-wide">
-                                                        Active Members
+                                                        Average Footfall
                                                     </p>
                                                     <p className="text-white text-2xl md:text-3xl drop-shadow-lg">
-                                                        5,000+
+                                                        1,000+
                                                     </p>
                                                 </div>
                                                 <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-tr from-blue-400/40 to-blue-600/60 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
@@ -76,7 +76,7 @@ const GDGNoidaWebsite: React.FC = () => {
                                                         Events Hosted
                                                     </p>
                                                     <p className="text-white text-2xl md:text-3xl drop-shadow-lg">
-                                                        150+
+                                                        50+
                                                     </p>
                                                 </div>
                                                 <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-tr from-green-400/40 to-green-600/60 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
@@ -86,10 +86,10 @@ const GDGNoidaWebsite: React.FC = () => {
                                             <div className="flex items-center justify-between group">
                                                 <div>
                                                     <p className="text-gray-300 text-xs md:text-sm font-medium tracking-wide">
-                                                        Projects Built
+                                                        Total members
                                                     </p>
                                                     <p className="text-white text-2xl md:text-3xl drop-shadow-lg">
-                                                        500+
+                                                        28,000+
                                                     </p>
                                                 </div>
                                                 <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-tr from-purple-400/40 to-purple-600/60 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
