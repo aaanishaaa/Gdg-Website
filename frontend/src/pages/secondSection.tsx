@@ -155,7 +155,7 @@ export default function SecondSection() {
             </div>
 
             <div className="group">
-              <div className="bg-white rounded-3xl p-8 border-2 border-black hover:border-gray-300 hover:shadow-lg transition-all duration-300 h-full">
+              <div className="bg-white rounded-3xl p-7 border-2 border-black hover:border-gray-300 hover:shadow-lg transition-all duration-300 h-full">
                 <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-700 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <Code className="w-7 h-7 text-white" />
                 </div>
