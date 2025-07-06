@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Calendar, Users, Code, Sparkles } from "lucide-react";
 import Navigation from "@/components/layout/navigation";
-
+import bg from "../assets/bg/bg.jpg"
 const GDGNoidaWebsite: React.FC = () => {
     return (
         <div>
@@ -13,7 +13,7 @@ const GDGNoidaWebsite: React.FC = () => {
                     <div
                         className="absolute inset-0 bg-cover bg-center"
                         style={{
-                            backgroundImage: `url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1920&q=80')`,
+                            backgroundImage: `url(${bg})`,
                             filter: "brightness(0.3)",
                         }}
                     />

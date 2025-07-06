@@ -52,7 +52,7 @@ const BlogInsights: React.FC = () => {
           <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-12 leading-relaxed">
             Dive into our blog for quick design tips, tech insights, and fresh inspiration. Curated by organizers, made for curious minds.
           </p>
-          <button className="inline-flex items-center px-8 py-4 bg-red-500 text-white rounded-full hover:bg-red-600 transition-colors duration-200 text-lg font-medium">
+          <button className="inline-flex items-center px-8 py-4 bg-red-500 text-white rounded-full hover:bg-yellow-400 transition-colors duration-200 text-lg font-medium">
             <ArrowRight className="w-5 h-5 mr-2" />
             View articles
           </button>
@@ -75,7 +75,7 @@ const BlogInsights: React.FC = () => {
                 
                 {/* Arrow overlay */}
                 <div className="absolute top-6 left-6">
-                  <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center text-white group-hover:bg-red-600 transition-colors duration-200">
+                  <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white group-hover:bg-red-600 transition-colors duration-200">
                     <ArrowRight className="w-5 h-5" />
                   </div>
                 </div>

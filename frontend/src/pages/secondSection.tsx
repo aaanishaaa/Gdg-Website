@@ -4,6 +4,7 @@ import { Calendar, Users, Code, ChevronRight, Rocket } from "lucide-react";
 import ScrollingTestimonials from "./Testimonial";
 import SponsorsSection from "./sponsers";
 import BlogInsights from "./blog";
+import PhotoGallery from "./PhotoGallery";
 // import keynote from "../assets/videos/keynote.mp4";
 
 
@@ -170,119 +171,162 @@ export default function secondSection() {
           </h1>
         </div>
         <div className="flex justify-center mb-20 px-5">
-          <div className="w-full max-w-8xl aspect-video rounded-2xl overflow-hidden shadow-lg ">
-        <video
-          // src={keynote}
-          title="GDG Noida Event Video"
-          controls
-          autoPlay
-          muted
-          loop
-          className="w-full h-full"
-        />
-          </div>
+  <div className="w-full max-w-8xl aspect-video rounded-2xl overflow-hidden shadow-lg">
+    <iframe
+      src="https://drive.google.com/file/d/1cbellINsVGslloDHF13UO0pHkGsZWMYs/view?usp=sharing"
+      title="GDG Noida Event Video"
+      className="w-full h-full"
+      allow="autoplay; encrypted-media"
+      allowFullScreen
+    />
+  </div>
         </div>
       </section>
       <section>
         <BlogInsights/>
       </section>
-      <section>
-        <div className="flex justify-center items-center flex-wrap gap-10 p-8">
-          <div className="w-70 h-52 group" style={{ perspective: "1000px" }}>
-            <div
-              className="w-full h-full relative transition-transform duration-1000"
-              style={{ transformStyle: "preserve-3d" }}
-              onMouseEnter={(e) =>
-                (e.currentTarget.style.transform = "rotateY(180deg)")
-              }
-              onMouseLeave={(e) =>
-                (e.currentTarget.style.transform = "rotateY(0deg)")
-              }
-            >
-              {/* Front Side */}
-              <div
-                className="absolute w-full h-full bg-purple-700 text-white flex items-center justify-center border-8 border-purple-700 rounded-lg text-2xl font-bold"
-                style={{ backfaceVisibility: "hidden" }}
-              >
-                <p>Front Side</p>
-              </div>
+      <div className="text-center mb-5">
+          <h1 className="text-6xl md:text-7xl font-bold text-gray-900 ">
+            Community Impact.
 
-              {/* Back Side */}
-              <div
-                className="absolute w-full h-full bg-orange-500 text-white flex items-center justify-center border-8 border-orange-500 rounded-lg text-2xl font-bold"
-                style={{
-                  backfaceVisibility: "hidden",
-                  transform: "rotateY(180deg)",
-                }}
-              >
-                <p>Back Side</p>
-              </div>
-            </div>
-          </div>
-          <div className="w-70 h-52 group" style={{ perspective: "1000px" }}>
-            <div
-              className="w-full h-full relative transition-transform duration-1000"
-              style={{ transformStyle: "preserve-3d" }}
-              onMouseEnter={(e) =>
-                (e.currentTarget.style.transform = "rotateY(180deg)")
-              }
-              onMouseLeave={(e) =>
-                (e.currentTarget.style.transform = "rotateY(0deg)")
-              }
-            >
-              {/* Front Side */}
-              <div
-                className="absolute w-full h-full bg-purple-700 text-white flex items-center justify-center border-8 border-purple-700 rounded-lg text-2xl font-bold"
-                style={{ backfaceVisibility: "hidden" }}
-              >
-                <p>Front Side</p>
-              </div>
+          </h1>
+        </div>
+      <section className="pb-5">
+        <div className="flex flex-col items-center gap-20 p-8 max-w-1xl mx-auto">
+          {/* Top row */}
+          <div className="flex flex-wrap justify-center gap-20 w-full">
+        <div className="w-70 h-52 group" style={{ perspective: "1000px" }}>
+          <div
+        className="w-full h-full relative transition-transform duration-1000"
+        style={{ transformStyle: "preserve-3d" }}
+        onMouseEnter={(e) =>
+          (e.currentTarget.style.transform = "rotateY(180deg)")
+        }
+        onMouseLeave={(e) =>
+          (e.currentTarget.style.transform = "rotateY(0deg)")
+        }
+          >
+        {/* Front Side */}
+        <div
+          className="absolute w-full h-full bg-red-500 text-white flex items-center justify-center rounded-lg text-3xl md:text-4xl font-bold"
+          style={{ backfaceVisibility: "hidden" }}
+        >
+          <p className="text-3xl md:text-4xl font-bold text-center">Total <br/> members</p>
+        </div>
 
-              {/* Back Side */}
-              <div
-                className="absolute w-full h-full bg-orange-500 text-white flex items-center justify-center border-8 border-orange-500 rounded-lg text-2xl font-bold"
-                style={{
-                  backfaceVisibility: "hidden",
-                  transform: "rotateY(180deg)",
-                }}
-              >
-                <p>Back Side</p>
-              </div>
-              
-            </div>
-          </div>
-          <div className="w-70 h-52 group" style={{ perspective: "1000px" }}>
-            <div
-              className="w-full h-full relative transition-transform duration-1000"
-              style={{ transformStyle: "preserve-3d" }}
-              onMouseEnter={(e) =>
-                (e.currentTarget.style.transform = "rotateY(180deg)")
-              }
-              onMouseLeave={(e) =>
-                (e.currentTarget.style.transform = "rotateY(0deg)")
-              }
-            >
-              {/* Front Side */}
-              <div
-                className="absolute w-full h-full bg-purple-700 text-white flex items-center justify-center border-8 border-purple-700 rounded-lg text-2xl font-bold"
-                style={{ backfaceVisibility: "hidden" }}
-              >
-                <p>Front Side</p>
-              </div>
-
-              {/* Back Side */}
-              <div
-                className="absolute w-full h-full bg-orange-500 text-white flex items-center justify-center border-8 border-orange-500 rounded-lg text-2xl font-bold"
-                style={{
-                  backfaceVisibility: "hidden",
-                  transform: "rotateY(180deg)",
-                }}
-              >
-                <p>Back Side</p>
-              </div>
-            </div>
+        {/* Back Side */}
+        <div
+          className="absolute w-full h-full bg-gray-400 text-white flex items-center justify-center rounded-lg text-3xl md:text-4xl font-bold"
+          style={{
+        backfaceVisibility: "hidden",
+        transform: "rotateY(180deg)",
+          }}
+        >
+          <p className="text-4xl md:text-5xl font-bold">40+</p>
+        </div>
           </div>
         </div>
+        <div className="w-70 h-52 group" style={{ perspective: "1000px" }}>
+          <div
+        className="w-full h-full relative transition-transform duration-1000"
+        style={{ transformStyle: "preserve-3d" }}
+        onMouseEnter={(e) =>
+          (e.currentTarget.style.transform = "rotateY(180deg)")
+        }
+        onMouseLeave={(e) =>
+          (e.currentTarget.style.transform = "rotateY(0deg)")
+        }
+          >
+        {/* Front Side */}
+        <div
+          className="absolute w-full h-full bg-blue-500 text-white flex items-center justify-center rounded-lg text-3xl md:text-4xl font-bold"
+          style={{ backfaceVisibility: "hidden" }}
+        >
+          <p className="text-3xl md:text-4xl font-bold text-center">People <br /> Impacted</p>
+        </div>
+
+        {/* Back Side */}
+        <div
+          className="absolute w-full h-full bg-gray-400 text-white flex items-center justify-center rounded-lg text-3xl md:text-4xl font-bold"
+          style={{
+        backfaceVisibility: "hidden",
+        transform: "rotateY(180deg)",
+          }}
+        >
+          <p className="text-4xl md:text-5xl font-bold">10k+</p>
+        </div>
+          </div>
+        </div>
+          </div>
+          {/* Bottom row */}
+          <div className="flex flex-wrap justify-center gap-20 w-full">
+        <div className="w-70 h-52 group" style={{ perspective: "1000px" }}>
+          <div
+        className="w-full h-full relative transition-transform duration-1000"
+        style={{ transformStyle: "preserve-3d" }}
+        onMouseEnter={(e) =>
+          (e.currentTarget.style.transform = "rotateY(180deg)")
+        }
+        onMouseLeave={(e) =>
+          (e.currentTarget.style.transform = "rotateY(0deg)")
+        }
+          >
+        {/* Front Side */}
+        <div
+          className="absolute w-full h-full bg-yellow-400 text-white flex items-center justify-center rounded-lg text-3xl md:text-4xl font-bold"
+          style={{ backfaceVisibility: "hidden" }}
+        >
+          <p className="text-3xl md:text-4xl font-bold text-center">Events <br /> hosted</p>
+        </div>
+
+        {/* Back Side */}
+        <div
+          className="absolute w-full h-full bg-gray-400 text-white flex items-center justify-center rounded-lg text-3xl md:text-4xl font-bold"
+          style={{
+        backfaceVisibility: "hidden",
+        transform: "rotateY(180deg)",
+          }}
+        >
+          <p className="text-4xl md:text-5xl font-bold">35+</p>
+        </div>
+          </div>
+        </div>
+        <div className="w-70 h-52 group" style={{ perspective: "1000px" }}>
+          <div
+        className="w-full h-full relative transition-transform duration-1000"
+        style={{ transformStyle: "preserve-3d" }}
+        onMouseEnter={(e) =>
+          (e.currentTarget.style.transform = "rotateY(180deg)")
+        }
+        onMouseLeave={(e) =>
+          (e.currentTarget.style.transform = "rotateY(0deg)")
+        }
+          >
+        {/* Front Side */}
+        <div
+          className="absolute w-full h-full bg-green-500 text-white flex items-center justify-center rounded-lg text-3xl md:text-4xl font-bold"
+          style={{ backfaceVisibility: "hidden" }}
+        >
+          <p className="text-2xl md:text-3xl font-bold text-center">Workshops <br /> Hours Run</p>
+        </div>
+
+        {/* Back Side */}
+        <div
+          className="absolute w-full h-full bg-gray-400 text-white flex items-center justify-center rounded-lg text-3xl md:text-4xl font-bold"
+          style={{
+        backfaceVisibility: "hidden",
+        transform: "rotateY(180deg)",
+          }}
+        >
+          <p className="text-4xl md:text-5xl font-bold">150 Hrs+</p>
+        </div>
+          </div>
+        </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <PhotoGallery />
       </section>
       {/* CTA Section */}
       <section className="relative z-10 py-20">
