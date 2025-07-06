@@ -31,7 +31,7 @@ const SponsorsSection: React.FC = () => {
   };
 
   return (
-    <div className="bg-white">
+    <div className="bg-white pt-12">
       <div className="max-w-5xl mx-auto lg:py-20 text-center">
         <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-2 tracking-tight">
           Sponsors & Partners

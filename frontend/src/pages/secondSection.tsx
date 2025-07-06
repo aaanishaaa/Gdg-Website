@@ -160,16 +160,23 @@ export default function secondSection() {
       <section>
         <SponsorsSection />
       </section>
+<<<<<<< HEAD
       <section>
         <ScrollingTestimonials />
       </section>
+=======
+      {/* <section>
+        <ScrollingTestimonials/>
+      </section> */}
+>>>>>>> ec8b483889e6a9cc7fbaa367eba971efc65f8f6c
       <section>
-        <div className="text-center mb-16">
+        <div className="text-center my-12">
           <h1 className="text-6xl md:text-7xl font-bold text-gray-900 mb-10 ">
             Together We Build
           </h1>
         </div>
         <div className="flex justify-center mb-20 px-5">
+<<<<<<< HEAD
           <div className="w-full max-w-8xl aspect-video rounded-2xl overflow-hidden shadow-lg">
             <iframe
                 src="https://www.youtube-nocookie.com/embed/watch?v=04dgaxEPow8"
@@ -179,6 +186,11 @@ export default function secondSection() {
                 allowFullScreen
               />
           </div>
+=======
+  <div className="w-full max-w-8xl aspect-video rounded-2xl overflow-hidden shadow-lg">
+    <iframe className="w-full h-full"  src="https://www.youtube.com/embed/04dgaxEPow8?si=tBqitdbhLvpkwSbS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+>>>>>>> ec8b483889e6a9cc7fbaa367eba971efc65f8f6c
         </div>
       </section>
       <section>
