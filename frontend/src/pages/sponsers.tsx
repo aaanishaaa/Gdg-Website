@@ -1,5 +1,12 @@
 import React from 'react';
 import brevo from "../assets/logo/brevo.png";
+import google from "../assets/logo/google.png"
+import wt from "../assets/logo/wt.png";
+import neo from "../assets/logo/neo.png";
+import flutter from "../assets/logo/flutter.png";
+import github from "../assets/logo/github.png";
+import ff from "../assets/logo/ff.png";
+
 interface Sponsor {
   id: string;
   name: string;
@@ -7,15 +14,15 @@ interface Sponsor {
   logo: string;
 }
 
-const SponsorsSection: React.FC = () => {``
+const SponsorsSection: React.FC = () => {
   const sponsors: Sponsor[] = [
-    { id: '1', name: 'Microsoft', website: 'https://microsoft.com', logo: 'https://via.placeholder.com/120x60/f3f4f6/6b7280?text=Logo' },
-    { id: '2', name: 'Google', website: 'https://google.com', logo: 'https://via.placeholder.com/120x60/f3f4f6/6b7280?text=Logo' },
-    { id: '3', name: 'Amazon', website: 'https://amazon.com', logo: 'https://via.placeholder.com/120x60/f3f4f6/6b7280?text=Logo' },
+    { id: '1', name: 'Women Techmakers', website: 'https://microsoft.com', logo: wt },
+    { id: '2', name: 'Google', website: 'https://google.com', logo: google },
+    { id: '3', name: 'Neo4j', website: 'https://amazon.com', logo: neo },
     { id: '4', name: 'Brevo', website: 'https://www.brevo.com/', logo: brevo },
-    { id: '5', name: 'Meta', website: 'https://meta.com', logo: 'https://via.placeholder.com/120x60/f3f4f6/6b7280?text=Logo' },
-    { id: '6', name: 'Netflix', website: 'https://netflix.com', logo: 'https://via.placeholder.com/120x60/f3f4f6/6b7280?text=Logo' },
-    { id: '7', name: 'Tesla', website: 'https://tesla.com', logo: 'https://via.placeholder.com/120x60/f3f4f6/6b7280?text=Logo' },
+    { id: '5', name: 'Flutter', website: 'https://meta.com', logo: flutter },
+    { id: '6', name: 'Github', website: 'https://netflix.com', logo: github },
+    { id: '7', name: 'Flutter Flow', website: 'https://tesla.com', logo: ff },
     { id: '8', name: 'Spotify', website: 'https://spotify.com', logo: 'https://via.placeholder.com/120x60/f3f4f6/6b7280?text=Logo' },
   ];
 
