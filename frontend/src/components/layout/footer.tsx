@@ -47,7 +47,7 @@ const navigationData = {
 
 export const Footer: React.FC = () => (
     <div className='p-2 md:p-4'>
-        <footer className="bg-black text-white rounded-2xl relative overflow-hidden">
+        <footer className="bg-black text-white rounded-b-2xl relative overflow-hidden">
             {/* Custom background */}
             <div
                 style={{
@@ -106,8 +106,8 @@ export const Footer: React.FC = () => (
             </div>
 
             {/* bottom bar */}
-            <div className="border-t border-gray-700">
-                <div className="max-w-7xl mx-auto px-8 py-4 text-center text-gray-500 text-sm">
+            <div className="border-t border-white">
+                <div className="max-w-7xl mx-auto px-8 py-4 text-center text-white text-sm">
                     © 2025 GDG Noida. All rights reserved. <br /> Part of Google Developer Groups.
 
                 </div>

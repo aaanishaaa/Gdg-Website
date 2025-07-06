@@ -1,13 +1,13 @@
 import React from 'react';
-import { Router, Route, Switch } from 'wouter';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Layout from './components/layout/layout';
 
 function App() {
   return (
     <Router>
-      <Switch>
-        <Route path="/" component={Layout} />
-      </Switch>
+      <Routes>
+        <Route path="/" element={<Layout />} />
+      </Routes>
     </Router>
   );
 }

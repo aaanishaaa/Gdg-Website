@@ -4,7 +4,7 @@ import Footer from '@/components/layout/footer';
 
 export default function layout() {
   return (
-    <div className="bg-gray-300">
+    <div className="bg-white">
       <HeroPage />
       <SecondPage />
       <Footer />
